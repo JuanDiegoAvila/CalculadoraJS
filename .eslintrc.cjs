@@ -17,7 +17,7 @@ module.exports = {
   plugins: [
     'react',
   ],
-  ignorePatterns: ['.css', '**/*.css'],
+  ignorePatterns: ['.css', '**/*.css', '**/*.test.js', '**/*.config.js'],
   rules: {
     semi: ['error', 'never'],
     'import/extensions': 'off',
