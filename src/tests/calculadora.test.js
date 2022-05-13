@@ -50,7 +50,7 @@ it('Si en una division el resultado tiene mas de 9 digitos y es decimal tira err
   expect(elementD).toBeInTheDocument()
   const elementI = screen.getByText('=')
   expect(elementI).toBeInTheDocument()
-  // Se selecciona el numero 8
+  /// Se selecciona el numero 8
   await userEvent.click(element8)
   // Se selecciona la division
   await userEvent.click(elementD)
