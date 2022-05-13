@@ -54,7 +54,7 @@ it('Si en una division el resultado tiene mas de 9 digitos y es decimal tira err
   await userEvent.click(element8)
   // Se selecciona la division
   await userEvent.click(elementD)
-  // Se selecciona el numero 9
+  /// Se selecciona el numero 9
   await userEvent.click(element9)
   // Se selecciona = 
   await userEvent.click(elementI)
