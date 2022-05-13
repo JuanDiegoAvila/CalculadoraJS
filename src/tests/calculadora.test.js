@@ -8,7 +8,7 @@ it('Al ingresar numeros con decimales y exceder 9 digitos tira error. ', async()
   render(<Calculadora />)
   const element = screen.getByText('9')
   expect(element).toBeInTheDocument()
-  // Se presiona 10 veces pero deveria aparecer solo 9
+  /// Se presiona 10 veces pero deveria aparecer solo 9
   for (let i = 0; i< 10; i++) {
     await userEvent.click(element)
   }
@@ -25,17 +25,17 @@ it('Si un resultado tiene mas de 9 digitos, se ve mensaje de error. ', async() =
   expect(elementX).toBeInTheDocument()
   const elementI = screen.getByText('=')
   expect(elementI).toBeInTheDocument()
-  // Se selecciona el numero 100000000
+  /// Se selecciona el numero 100000000
   await userEvent.click(element1)
   for(let i = 0; i < 8; i++){
     await userEvent.click(element0)
   }
-  // Se elije la multiplicacion
+  /// Se elije la multiplicacion
   await userEvent.click(elementX)
   // Se multiplica por 10
   await userEvent.click(element1)
   await userEvent.click(element0)
-  // Se selecciona = 
+  /// Se selecciona = 
   await userEvent.click(elementI)
   expect(screen.getByText('ERROR')).toBeInTheDocument()
 })
